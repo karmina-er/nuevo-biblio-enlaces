@@ -1,0 +1,113 @@
+/* Fondo y tipografía */
+body {
+    background-color: #1e1e2f; /* fondo oscuro */
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #00d8ff; /* azul neón */
+    margin-bottom: 30px;
+    text-shadow: 0 2px 6px rgba(0, 216, 255, 0.4);
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Formulario */
+form {
+    background-color: #2a2a3f; /* fondo del formulario */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+/* Inputs */
+form input {
+    background-color: #1e1e2f;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+form input::placeholder {
+    color: #888;
+}
+
+/* Botones */
+form button, .btn-warning, .btn-danger {
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+/* Botón agregar */
+form button {
+    background-color: #00d8ff;
+    color: #1e1e2f;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #00ffa0;
+    color: #1e1e2f;
+}
+
+/* Botones Editar y Borrar */
+.btn-warning {
+    background-color: #f39c12 !important;
+    color: #fff !important;
+}
+
+.btn-warning:hover {
+    background-color: #e67e22 !important;
+}
+
+.btn-danger {
+    background-color: #e74c3c !important;
+    color: #fff !important;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b !important;
+}
+
+/* Lista de enlaces */
+.list-group-item {
+    background-color: #2a2a3f;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #383857;
+}
+
+.list-group-item a {
+    color: #00d8ff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.list-group-item a:hover {
+    color: #00ffa0;
+    text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+    }
+}
