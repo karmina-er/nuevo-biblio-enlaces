@@ -155,6 +155,22 @@ app.post("/edit/:id", async (req, res) => {
         res.status(500).send("Error actualizando enlace");
     }
 });
+app.get("/create-table", async (req, res) => {
+  try {
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS enlaces (
+        id SERIAL PRIMARY KEY,
+        titulo TEXT NOT NULL,
+        url TEXT NOT NULL
+      )
+    `);
+    res.send("Tabla creada o ya existía");
+  } catch (err) {
+    console.error("Error creando tabla:", err.message);
+    res.status(500).send("Error creando tabla: " + err.message);
+  }
+});
+
 
 // Iniciar servidor
 app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}`));
